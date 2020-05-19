@@ -30,4 +30,4 @@ jobs:
     - name: Coveralls push
       uses: coverallsapp/github-action@v1.1.1
       with:
-        github-token: ${{ secrets.COVERALLS_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
