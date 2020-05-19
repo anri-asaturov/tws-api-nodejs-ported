@@ -1,6 +1,6 @@
 import { HistoricalTick } from './HistoricalTick';
 
-test('FamilyCode::constructor', () => {
+test('HistoricalTick::constructor', () => {
   let f = new HistoricalTick();
   expect(f.Time).toBe(0);
   expect(f.Price).toBe(0);

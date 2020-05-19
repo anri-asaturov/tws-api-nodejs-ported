@@ -1,6 +1,6 @@
 import { HistogramEntry } from './HistogramEntry';
 
-test('FamilyCode::constructor', () => {
+test('HistogramEntry::constructor', () => {
   let f = new HistogramEntry();
   expect(f.Price).toBe(0);
   expect(f.Size).toBe(0);
