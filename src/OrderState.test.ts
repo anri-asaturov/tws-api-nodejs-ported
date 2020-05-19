@@ -66,4 +66,9 @@ test('OrderState::Equals', () => {
   expect(f.Equals(f2)).toBe(false);
   f2.Status = 'a';
   expect(f.Equals(f2)).toBe(true);
+
+  f2.Commission = 44;
+  expect(f.Equals(f2)).toBe(false);
+  f2.Commission = 1;
+  expect(f.Equals(f2)).toBe(true);
 });
