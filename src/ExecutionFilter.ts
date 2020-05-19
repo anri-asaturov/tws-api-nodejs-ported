@@ -38,6 +38,7 @@ export class ExecutionFilter {
 
   GetHashCode() {
     return getHashCode(
+      'ExecutionFilter',
       this.ClientId,
       this.AcctCode,
       this.Time,

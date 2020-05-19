@@ -47,7 +47,7 @@ test('OrderState::getHashCode', () => {
   const f = getOrderState();
   const hash = f.GetHashCode();
   expect(hash).toBe(f.GetHashCode());
-  expect(hash).toBe('d8e197d5c0ae016075908ea6dd5e7cadd751a3540c8052c5ba81c462f94d93b2');
+  expect(hash).toBe('ddbe53a6b754af0a39caab228e44b4e1560d5a16693ab4a540717506592e75ac');
 
   const f2 = getOrderState();
   const hash2 = f2.GetHashCode();

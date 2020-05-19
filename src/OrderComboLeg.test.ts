@@ -9,7 +9,7 @@ test('OrderComboLeg::getHashCode', () => {
   const f = new OrderComboLeg(1.24);
   const hash = f.GetHashCode();
   expect(hash).toBe(f.GetHashCode());
-  expect(hash).toBe('c63c003345e87abc48ff29c2f2c972ebc69ac5e9fd3793b15d39f9f9889f709e');
+  expect(hash).toBe('2157711b600db85d8c9fd114b003bc3f395ddd7f0c66f30d55768aa437218a37');
 
   const f2 = new OrderComboLeg(1.24);
   const hash2 = f2.GetHashCode();

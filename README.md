@@ -7,7 +7,9 @@ NodeJS Interactive Brokers Trader Workstation API Client. Ported manually from o
 
 c# sources are intentionally kept in the same folder with ported files to simplify review, updates, diff and porting.
 
-# Notes
+# Usage and porting notes
+
+- when class implements `Equals()` function, remember to use it instead of `===`, unless you really want to compare by ref for some reason.
 
 - `something == null` comparison is used to test for `null` or `undefined` in one expression.
 
@@ -16,3 +18,9 @@ c# sources are intentionally kept in the same folder with ported files to simpli
 - private field + public getter/setter pattern is replaces with just one public field for simplicity.
 
 - when it is safe to do so, floats are being compared with `===`. Example: numbers came from a socket.
+
+- some default values changed from `null` to `'' or 0 or false`, usage shows it's safe and it simplifies things.
+
+# Testing
+
+- some test files may seem to be useless/excessive, they've been created to include file in coverage report in case that file will get testable logic in future

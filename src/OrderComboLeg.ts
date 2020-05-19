@@ -22,6 +22,6 @@ export class OrderComboLeg {
   }
 
   GetHashCode() {
-    return getHashCode(this.Price);
+    return getHashCode('OrderComboLeg', this.Price);
   }
 }

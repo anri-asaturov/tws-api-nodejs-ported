@@ -15,7 +15,7 @@ test('ExecutionFilter::getHashCode', () => {
   const f = new ExecutionFilter(4, 'asdf', 'gggg', 'ee', 'wewe', 'ewe', 'wewe');
   const hash = f.GetHashCode();
   expect(hash).toBe(f.GetHashCode());
-  expect(hash).toBe('e2d325c53f84db23505c9b28f4414f67d956927bf546e67d8be945ca3a284185');
+  expect(hash).toBe('5b0e19fd1f10b55bb99858f4b8e81547d0d7813c01f051290663a8b52fd30c9b');
 
   const f2 = new ExecutionFilter(4, 'asdf', 'gggg', 'ee', 'wewe', 'ewe', 'wewe');
   const hash2 = f2.GetHashCode();

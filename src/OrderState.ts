@@ -63,6 +63,7 @@ export class OrderState {
 
   GetHashCode() {
     return getHashCode(
+      'OrderState',
       this.Status,
       this.InitMarginBefore,
       this.MaintMarginBefore,
