@@ -27,3 +27,7 @@ jobs:
     - run: yarn install --frozen-lockfile
     - run: yarn verify
     - run: yarn test
+    - name: Coveralls push
+      uses: coverallsapp/github-action@v1.1.1
+      with:
+        github-token: ${{ secrets.COVERALLS_TOKEN }}
