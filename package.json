@@ -12,7 +12,7 @@
     "verify:ts": "tsc --noEmit",
     "fix": "run-p -ln fix:*",
     "fix:prettier": "yarn run verify:prettier --write",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "husky": {
     "hooks": {
