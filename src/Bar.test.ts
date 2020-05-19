@@ -10,4 +10,5 @@ test('Bar::constructor', () => {
   expect(inst.Volume).toBe(5);
   expect(inst.Count).toBe(6);
   expect(inst.WAP).toBe(7);
+  expect(Object.keys(inst).length).toBe(8);
 });

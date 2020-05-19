@@ -16,4 +16,6 @@ test('AccountSummaryTags::GetAllTags', () => {
   expect(typeof actual).toBe('string');
   expect(actual.length).toBeGreaterThan(0);
   expect(expected.length).toBe(actual.length);
+
+  expect(Object.keys(inst).length).toBe(29);
 });
