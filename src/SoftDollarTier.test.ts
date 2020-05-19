@@ -33,4 +33,7 @@ test('SoftDollarTier::Equals', () => {
 
   f2.DisplayName = 'asdf';
   expect(f.Equals(f2)).toBe(true);
+
+  expect(f.DisplayName).toBe(f.toString());
+  expect(f.DisplayName).toBe(f.ToString());
 });
