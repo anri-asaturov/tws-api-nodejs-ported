@@ -3,7 +3,7 @@
 
 # tws-api-nodejs-ported
 
-NodeJS Interactive Brokers Trader Workstation API Client. Ported manually from official c# library.
+NodeJS Interactive Brokers Trader Workstation API Client. Ported to TypeScript manually from official c# library.
 
 c# sources are intentionally kept in the same folder with ported files to simplify review, updates, diff and porting.
 
