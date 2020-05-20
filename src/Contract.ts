@@ -1,5 +1,4 @@
-﻿import { List } from './lib/List';
-import { ComboLeg } from './ComboLeg';
+﻿import { ComboLegList } from './lib/List';
 import { DeltaNeutralContract as DeltaNeutralContractClass } from './DeltaNeutralContract';
 
 /**
@@ -23,7 +22,7 @@ export class Contract {
   SecIdType = '';
   SecId = '';
   ComboLegsDescription = '';
-  ComboLegs = new List<ComboLeg>();
+  ComboLegs = new ComboLegList();
   DeltaNeutralContract = new DeltaNeutralContractClass();
 
   ToString() {

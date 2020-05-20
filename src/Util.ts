@@ -1,5 +1,4 @@
-﻿import { List } from './lib/List';
-import { TagValue } from './TagValue';
+﻿import { List, TagValueList } from './lib/List';
 
 export class Util {
   static StringIsEmpty(str?: string | null) {
@@ -46,7 +45,7 @@ export class Util {
     return true;
   }
 
-  static TagValueListToString(options?: List<TagValue> | null) {
+  static TagValueListToString(options?: TagValueList | null) {
     if (options == null) return '';
     let tagValuesStr = '';
 

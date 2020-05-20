@@ -1,5 +1,5 @@
 import { Util } from './Util';
-import { List } from './lib/List';
+import { TagValueList } from './lib/List';
 import { TagValue } from './TagValue';
 
 test('Util.StringIsEmpty', () => {
@@ -13,7 +13,7 @@ test('Util.StringIsEmpty', () => {
 test('Util.TagValueListToString', () => {
   expect(Util.TagValueListToString(null)).toBe('');
   expect(Util.TagValueListToString()).toBe('');
-  const list = new List<TagValue>();
+  const list = new TagValueList();
   expect(Util.TagValueListToString(list)).toBe('');
   list.push(new TagValue('abc', 'def'));
   expect(Util.TagValueListToString(list)).toBe('abc=def;');
@@ -22,10 +22,10 @@ test('Util.TagValueListToString', () => {
 });
 
 test('Util.VectorEqualsUnordered', () => {
-  const v1 = new List<TagValue>();
+  const v1 = new TagValueList();
   v1.push(new TagValue('a', 'b'));
   v1.push(new TagValue('b', 'c'));
-  const v2 = new List<TagValue>();
+  const v2 = new TagValueList();
   v2.push(new TagValue('b', 'c'));
   v2.push(new TagValue('a', 'b'));
 
@@ -36,9 +36,9 @@ test('Util.VectorEqualsUnordered', () => {
   expect(Util.VectorEqualsUnordered(null, null)).toBe(true);
   expect(Util.VectorEqualsUnordered(null, undefined)).toBe(true);
   expect(Util.VectorEqualsUnordered(undefined, null)).toBe(true);
-  expect(Util.VectorEqualsUnordered(null, new List<TagValue>())).toBe(true);
-  expect(Util.VectorEqualsUnordered(new List<TagValue>(), null)).toBe(true);
-  expect(Util.VectorEqualsUnordered(new List<TagValue>(), new List<TagValue>())).toBe(true);
+  expect(Util.VectorEqualsUnordered(null, new TagValueList())).toBe(true);
+  expect(Util.VectorEqualsUnordered(new TagValueList(), null)).toBe(true);
+  expect(Util.VectorEqualsUnordered(new TagValueList(), new TagValueList())).toBe(true);
   v2.push(new TagValue('a', 'b'));
   expect(Util.VectorEqualsUnordered(v1, v2)).toBe(false);
   v1.push(new TagValue('a', 'b'));
@@ -46,13 +46,4 @@ test('Util.VectorEqualsUnordered', () => {
   v1.push(new TagValue('y', 'y'));
   v2.push(new TagValue('z', 'z'));
   expect(Util.VectorEqualsUnordered(v1, v2)).toBe(false);
-
-  const o1 = {},
-    o2 = {},
-    o3 = {};
-  const v3 = new List<Object>();
-  v3.push(o1, o2, o3);
-  const v4 = new List<Object>();
-  v4.push(o1, o2, o3);
-  expect(Util.VectorEqualsUnordered(v3, v4)).toBe(true);
 });

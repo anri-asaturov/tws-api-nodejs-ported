@@ -1,6 +1,5 @@
 ﻿import { Contract as ContractClass } from './Contract';
-import { List } from './lib/List';
-import { TagValue } from './TagValue';
+import { TagValueList } from './lib/List';
 
 /**
  * @class ContractDetails
@@ -26,7 +25,7 @@ export class ContractDetails {
   EvMultiplier = 0;
   MdSizeMultiplier = 0;
   AggGroup = 0;
-  SecIdList = new List<TagValue>();
+  SecIdList = new TagValueList();
   UnderSymbol = '';
   UnderSecType = '';
   MarketRuleIds = '';
