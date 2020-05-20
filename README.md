@@ -5,7 +5,7 @@
 
 NodeJS Interactive Brokers Trader Workstation API Client. Ported to TypeScript manually from official c# library.
 
-c# sources are intentionally kept in the same folder with ported files to simplify review, updates, diff and porting.
+c# sources are intentionally kept in the same folder with ported files for reference and to simplify review, updates, diff and porting.
 
 # Usage and porting notes
 

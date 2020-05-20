@@ -10,5 +10,5 @@ export interface EReaderSignal {
   /**
    * @brief Makes the consuming thread waiting until a signal is issued.
    */
-  waitForSignal(): void;
+  waitForSignal(): Promise<void>;
 }
