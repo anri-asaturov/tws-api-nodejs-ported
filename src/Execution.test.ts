@@ -8,6 +8,7 @@ test('Liquidity', () => {
   l.Liquidity(2);
   expect(l.Value).toBe(2);
   expect(l.ToString()).toBe('Removed Liquidity');
+  expect(l.ToString()).toBe(l.toString());
 });
 
 test('Execution::constructor', () => {
