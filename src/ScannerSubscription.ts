@@ -8,8 +8,8 @@ export class ScannerSubscription {
   scanCode = '';
   abovePrice = Number.MAX_VALUE;
   belowPrice = Number.MAX_VALUE;
-  aboveVolume = Number.MAX_SAFE_INTEGER;
-  averageOptionVolumeAbove = Number.MAX_SAFE_INTEGER;
+  aboveVolume = Number.MAX_VALUE;
+  averageOptionVolumeAbove = Number.MAX_VALUE;
   marketCapAbove = Number.MAX_VALUE;
   marketCapBelow = Number.MAX_VALUE;
   moodyRatingAbove = '';

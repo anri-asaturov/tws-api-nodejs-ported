@@ -2,7 +2,7 @@
 
 export class Constants {
   static ClientVersion = 66; //API v. 9.71
-  static EOL = 0;
+  static EOL = new Uint8Array([0]);
   static BagSecType = 'BAG';
   static REDIRECT_COUNT_MAX = 2;
   static FaGroups = 1;
