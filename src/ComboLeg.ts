@@ -1,4 +1,6 @@
-﻿/**
+﻿import { getHashCode } from './lib/hash';
+
+/**
  * @brief Class representing a leg within combo orders.
  * @sa Order
  */
@@ -18,4 +20,17 @@ export class ComboLeg {
     public DesignatedLocation = 0,
     public ExemptCode = 0
   ) {}
+
+  GetHashCode() {
+    return getHashCode(
+      this.ConId,
+      this.Ratio,
+      this.Action,
+      this.Exchange,
+      this.OpenClose,
+      this.ShortSaleSlot,
+      this.DesignatedLocation,
+      this.ExemptCode
+    );
+  }
 }

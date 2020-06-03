@@ -21,6 +21,8 @@ c# sources are intentionally kept in the same folder with ported files for refer
 
 - some default values changed from `null` to `'' or 0 or false`, usage shows it's safe and it simplifies things.
 
+- comments are preserved where it didn't require much effort, but referring to c# sources for comments is advised.
+
 # Testing
 
 - some test files may seem to be useless/excessive, they've been created to include file in coverage report in case that file will get testable logic in future
