@@ -3,3 +3,7 @@ export function compareStrings(a: string, b: string, ignoreCase = false) {
     sensitivity: ignoreCase ? 'base' : 'variant'
   });
 }
+
+export function isNullOrWhiteSpace(input: string) {
+  return !input || !input.trim();
+}

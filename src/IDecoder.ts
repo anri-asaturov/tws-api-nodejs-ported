@@ -4,6 +4,6 @@
   ReadLong(): number;
   ReadInt(): number;
   ReadIntMax(): number;
-  ReadBoolFromInt(): number;
-  ReadString(): number;
+  ReadBoolFromInt(): boolean;
+  ReadString(): string;
 }

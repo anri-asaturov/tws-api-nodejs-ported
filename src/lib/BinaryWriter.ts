@@ -3,7 +3,7 @@ import { Contract } from '../Contract';
 import { Constants } from '../Constants';
 import { TagValue } from '../TagValue';
 import { List, TagValueList } from './List';
-import { Util } from '../Util';
+import { TagValueListToString } from '../Util';
 
 const BLOCK_SIZE = 1024;
 
@@ -21,6 +21,8 @@ export class BinaryWriter {
     this.pos += data.length;
   }
 
+  // PORT NOTE: This returns a shallow copy of the buffer (or a portion of it), contrary to MemoryStream implementation.
+  // But it shouldn't affect the logic.
   getBuffer() {
     return this.buffer.slice(0, this.pos);
   }
@@ -86,7 +88,7 @@ export class BinaryWriter {
   }
 
   AddTagValueListParameter(options: TagValueList) {
-    this.AddParameter(Util.TagValueListToString(options));
+    this.AddParameter(TagValueListToString(options));
   }
 
   AddParameterMax(value: number) {

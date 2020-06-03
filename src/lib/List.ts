@@ -2,6 +2,7 @@ import { TagValue } from '../TagValue';
 import { ComboLeg } from '../ComboLeg';
 import { OrderComboLeg } from '../OrderComboLeg';
 import { getHashCode } from './hash';
+import { OrderCondition } from '../OrderCondition';
 
 // do not use this directly bcs it's hard to determine instance of generic type when serizlising
 export abstract class List<T extends { GetHashCode: () => string }> extends Array<T> {

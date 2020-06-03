@@ -23,6 +23,8 @@ c# sources are intentionally kept in the same folder with ported files for refer
 
 - comments are preserved where it didn't require much effort, but referring to c# sources for comments is advised.
 
+- OrderCondition modules had a nasty circular reference, fixed by merging all \*Condition.ts files code into OrderCondition.ts
+
 # Testing
 
 - some test files may seem to be useless/excessive, they've been created to include file in coverage report in case that file will get testable logic in future
