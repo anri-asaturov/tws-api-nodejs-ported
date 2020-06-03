@@ -12,7 +12,8 @@
     "verify:ts": "tsc --noEmit",
     "fix": "run-p -ln fix:*",
     "fix:prettier": "yarn run verify:prettier --write",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "deps": "yarn upgrade-interactive --latest"
   },
   "husky": {
     "hooks": {
